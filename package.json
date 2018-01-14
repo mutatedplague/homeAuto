@@ -1,0 +1,26 @@
+{
+  "name": "homeAuto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "bson": "^1.0.4",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "md5": "^2.2.1",
+    "moment": "^2.19.2",
+    "node-hue-api": "^2.4.2",
+    "node-restful": "^0.1.19",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.4",
+    "tplink-lightbulb": "^1.2.4"
+  }
+}

@@ -1,0 +1,139 @@
+<main role="main">
+
+
+    <div class="header">
+        <div class="container">
+            <div class="titleBar">
+                <div class="title" href="#">home<span>Auto</span></div>
+                <div class="settings" data-toggle="modal" data-target="#bridgeSetup"><span>Settings</span></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="dayInfo">
+                <div class="time">{{date | date : 'hh:mm'}}</div>
+                <div class="date">{{date | date : "fullDate"}}</div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="body">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                            <center>
+                        <div class="itemIcon">
+                        
+                            <img src="images/040-home.png">
+                 
+                        </div>
+                        <div class="caption">
+                            <h3>All Lights</h3>
+                            <p>This will toggle all of your lights</p>
+                            <p> 
+                                <div class="dim">
+                            <input type="range" min="5" max="100" value="5" ng-model="dimValue" ng-change="dim(dimValue)" class="range" />
+                            <span class="range-value">{{dimValue}}%</span>
+                        </div>
+
+
+                                <div class="lights" ng-click="lightToggleAll()">
+                                    <i class="fa fa-toggle-on" ng-show="allLights" aria-hidden="true"></i> <i class="fa fa-toggle-off" ng-hide="allLights" aria-hidden="true"></i>
+                                </div>
+
+                            </p>
+                        </div>
+                               </center>
+                    </div>
+                </div>
+
+                <div ng-repeat="item in lightsArr['tpLink'] track by $index" class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                           <center>
+                        <div class="itemIcon">
+                   
+                            <img src="images/037-idea.png">
+    
+                        </div>
+                        <div class="caption">
+                            <h3>{{item.name}}</h3>
+                            <p>{{item._sysinfo.description}}</p>
+                            <div class="lights" ng-click="lightToggle(0, $index, !item._sysinfo.light_state.on_off)">
+                                <i class="fa fa-toggle-on" ng-show="item._sysinfo.light_state.on_off" aria-hidden="true"></i> <i class="fa fa-toggle-off" ng-hide="item._sysinfo.light_state.on_off" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                              </center>
+                    </div>
+                </div>
+
+                        <div ng-repeat="item in lightsArr['hue'][0]['lights'] track by $index" class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                           <center>
+                        <div class="itemIcon">
+                   
+                            <img src="images/037-idea.png">
+    
+                        </div>
+                        <div class="caption">
+                            <h3>{{item.name}}</h3>
+                            <p>{{item.manufacturername}}</p>
+                            <div class="lights" ng-click="lightToggle(1, $index, !item.state.on)">
+                                <i class="fa fa-toggle-on" ng-show="item.state.on" aria-hidden="true"></i> <i class="fa fa-toggle-off" ng-hide="item.state.on" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                              </center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+<div modal="showModal" id="bridgeSetup" close="cancel()" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Settings</h4>
+      </div>
+      <div class="modal-body">
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Hue Bridge</div>
+  <div class="panel-body">
+ <ul class="list-group">
+    <li class="list-group-item active" ng-click="discoverBridges()">Discover</li>
+  </ul>
+  <p>Make sure to press button on top of the bridge before pressing connect.
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+    <th>Address</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat="item in bridgeArr track by $index">
+    <td>{{item.ipaddress}}</td> 
+    <td ng-click="connectBridge(item.ipaddress, $index)">{{ item.connected ? "Connected" : "Connect" }}</td>
+  </tr>
+  </table>
+</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</main>

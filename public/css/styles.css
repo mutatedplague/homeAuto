@@ -1,0 +1,168 @@
+/*.container {
+  margin-top: 75px;
+}*/
+
+body {
+  background-color: #EFEFEF;
+  color: #ccc !important;
+}
+
+.header {
+  background-color: #0A0916;
+  padding-bottom: 20px;
+}
+
+.titleBar {
+ padding-top: 16px;
+}
+
+.settings {
+  text-align: right;
+  position: relative;
+  top: -28px;
+  font-size: 20px;
+}
+
+.title {
+  color: rgba(255,255,255,0.6);
+  font-size: 20px;
+}
+
+.title span {
+  color: rgba(255,255,255,1);
+}
+
+.body {
+  padding-top: 16px;
+}
+
+.dayInfo {
+  color: rgba(255,255,255,1);
+}
+.dayInfo .time {
+  font-size: 90px;
+  text-align: left;
+}
+.dayInfo .date {
+  font-size: 25px;
+  text-align: left;
+  color: rgba(255,255,255,0.6);
+}
+
+.lights {
+  font-size: 50px;
+  text-align: center;
+}
+
+.blinds {
+  position: fixed;
+  top: 110px;
+  left: 32px;
+  font-size: 50px;
+}
+
+.itemIcon {
+  padding: 16px;
+} 
+
+.itemIcon img {
+  width: 30%;
+}
+
+
+.dim {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+}
+
+.range-value {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background:  #362A51;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(0, 0, 0, 0.29);
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.2);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -17px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #362A51;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background:  #362A51;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(0, 0, 0, 0.29);
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background:  #362A51;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background:  #362A51;
+  border: 0.2px solid rgba(0, 0, 0, 0.29);
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-fill-upper {
+  background:  #362A51;
+  border: 0.2px solid rgba(0, 0, 0, 0.29);
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background:  #362A51;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background:  #362A51;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background:  #362A51;
+}
+
