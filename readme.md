@@ -1,7 +1,7 @@
-# homeAuto
+![alt text](https://raw.githubusercontent.com/mutatedplague/homeAuto/master/images/logo.png)
+# homeAuto is a mobile friendly, AngularJS powered Dashboard for IoT lights.
 
-homeAuto is a mobile friendly, AngularJS powered Dashboard for IoT lights.
-
+![alt text](https://raw.githubusercontent.com/mutatedplague/homeAuto/master/images/screenshot.png)
 # Features!
 
   - Easy Philips Bridge Setup
